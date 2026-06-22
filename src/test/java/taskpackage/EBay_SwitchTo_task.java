@@ -19,7 +19,7 @@ public class EBay_SwitchTo_task
 
             driver.get("https://www.ebay.com/");
 
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
             //Thread.sleep(2000);
 

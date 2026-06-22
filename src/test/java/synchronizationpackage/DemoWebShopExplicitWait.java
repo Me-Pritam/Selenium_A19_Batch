@@ -22,7 +22,7 @@ public class DemoWebShopExplicitWait
 
             driver.get("https://demowebshop.tricentis.com/");
 
-            WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+            WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 
 
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/login']")))
