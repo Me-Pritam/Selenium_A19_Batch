@@ -26,7 +26,6 @@ public class UsingFluentWaitInSwiggy
 
            FluentWait<WebDriver> wait = new FluentWait<>(driver);
 
-           wait.pollingEvery(Duration.ofSeconds(1));
 
            wait.withTimeout(Duration.ofSeconds(10));
 
