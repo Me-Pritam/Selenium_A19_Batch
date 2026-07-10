@@ -19,26 +19,22 @@ public class PerformDragAndDropWithoutinbuiltMethod
 
           driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
 
-          driver.get("https://excalidraw.com/");
+          driver.get("https://www.autodraw.com/");
 
           Actions action = new Actions(driver);
 
-          action.click(driver.findElement(By.xpath("//input[@aria-label='Draw']")))
-                  .moveByOffset(-100,100)
-                  .pause(Duration.ofSeconds(1))
-                  .clickAndHold()
-                  .pause(Duration.ofSeconds(1))
-                  .moveByOffset(100,0)
-                  .pause(Duration.ofSeconds(1))
-                  .release()
-                  .pause(Duration.ofSeconds(1))
-                  .clickAndHold()
-                  .pause(Duration.ofSeconds(1))
-                  .moveByOffset(-100,0)
-                  .pause(Duration.ofSeconds(1))
-                  .release()
+          action.click(driver.findElement(By.xpath("//div[contains(text(),'Start Drawing')]")))
+                          .perform();
 
-                  .perform();
+         action.click(driver.findElement(By.xpath("//div[@class='tool pencil']")))
+                 .moveByOffset(100,0)
+                 .pause(Duration.ofSeconds(1))
+                 .doubleClick()
+                 .clickAndHold()
+                 .pause(Duration.ofSeconds(1))
+                 .moveByOffset(100,0)
+                 .release()
+                 .perform();
 
       }
       catch (Exception e)
