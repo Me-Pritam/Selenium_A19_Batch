@@ -19,7 +19,7 @@ public class LogInBaseClass {
     public  String url;
 
      PropertyFileUtils property;
-     BrowserUtils browserUtil;
+     public BrowserUtils browserUtil;
      public ActionsUtils action;
      public LogInPagePOM login;
      public NavBarPOM navBar;

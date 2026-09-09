@@ -45,11 +45,17 @@ public class BrowserUtils
 
                 EdgeOptions edgeOptions = new EdgeOptions();
                 edgeOptions.setExperimentalOption("prefs",prefs1);
+                edgeOptions.addArguments("--headless");
                 driver = new EdgeDriver(edgeOptions);
                 break;
             default:throw new InvalidArgumentException("Invalid browser");
         }
 
+    }
+
+    public String getUrl()
+    {
+        return driver.getCurrentUrl();
     }
 
     public void maximizeBrowser()
